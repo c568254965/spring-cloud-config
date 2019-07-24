@@ -7,25 +7,13 @@ spring:
 orderQueue: orderQueue
 server:
     port: 6821
----
-
-
 mybatis:
   type-aliases-package: com.huarui.models
   mapper-path: com.huarui.dao
-
 feign:
   hystrix:
     enabled: true
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://localhost:6801/eureka/
-  instance:
-    instance-id: huarui_user   #自定义服务名称信息
-    prefer-ip-address: true     #访问路径可以显示IP地址
+---
 spring:
   profiles: dev
   application:
@@ -50,6 +38,17 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:6801/eureka/
+  instance:
+    instance-id: huarui_user   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
 
 
 
