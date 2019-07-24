@@ -5,9 +5,10 @@ spring:
       - dev
 
 orderQueue: orderQueue
----
 server:
     port: 6821
+---
+
 
 mybatis:
   type-aliases-package: com.huarui.models
