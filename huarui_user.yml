@@ -4,6 +4,7 @@ spring:
     active: 
       - dev
 
+orderQueue: orderQueue
 ---
 server:
     port: 6821
@@ -51,7 +52,6 @@ spring:
 
 
 
-orderQueue: orderQueue
 
 
 ---
